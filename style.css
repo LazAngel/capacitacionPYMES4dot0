@@ -1,0 +1,49 @@
+/* /////////////////////////////////////////////// */
+/* GLOBAL */
+/* /////////////////////////////////////////////// */
+body {	background-color: #cc0000; color: black;}
+.material-icons { color: black; } .custom-icons {max-height:2vw; vertical-align:middle;}
+i {vertical-align:middle;}
+h1,h2,h3,h4,h5,h6,p,pre{margin:0;padding:0}
+a:visited {color:blue;} a:visited:hover {color:red;}
+a:hover { animation-name: mousehover; animation-duration: 2s; color: red; cursor:pointer;}
+
+/* /////////////////////////////////////////////// */
+/* CONTENIDO */
+/* /////////////////////////////////////////////// */
+#contenido{	position: absolute; left:10%; 
+			width: 74%; min-height:100%; 
+			padding:3vw; 
+			background-color:white;  }
+#banner{ display:flex;  flex-flow: wrap;}
+	#banner i {font-size:60px;}
+.separator{width: 100%; max-width: 100%; display:flex;}
+.wrap {flex-wrap:wrap;} .nowrap {flex-wrap:nowrap;}
+.row{flex-direction:row;} .column {flex-direction:column;} 
+.between {justify-content:space-between;}
+.marginleft {margin-left: 10%;}	
+.around {justify-content:space-around;}	
+.evenly {justify-content:space-evenly;}	
+.center {justify-content:center; text-align: center; }	
+
+
+
+/* /////////////////////////////////////////////// */
+/* INDICE */
+/* /////////////////////////////////////////////// */
+.box {		
+	padding: 1vw;	
+	background-color: #e6ffff; border-style: ridge;		
+}
+
+.small {width: 30%;} .medium {width: 60%;} .big {width: 90%;}  
+
+/* /////////////////////////////////////////////// */
+/* ANIMATION */
+/* /////////////////////////////////////////////// */
+
+
+@keyframes mousehover {  
+  0% {color: blue;}
+  100% {color: red;}  
+}
