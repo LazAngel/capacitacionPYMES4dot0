@@ -5,8 +5,12 @@ body {	background-color: #cc0000; color: black;}
 .material-icons { color: black; } .custom-icons {max-height:2vw; vertical-align:middle;}
 i {vertical-align:middle;}
 h1,h2,h3,h4,h5,h6,p,pre{margin:0;padding:0}
-a:visited {color:blue;} a:visited:hover {color:red;}
+a {font-weight:bold; color:blue;} a:visited {color:blue;} a:visited:hover {color:red;}
 a:hover { animation-name: mousehover; animation-duration: 2s; color: red; cursor:pointer;}
+/* /////////////////////////////////////////////// */
+/* NORMAS APA */
+/* /////////////////////////////////////////////// */
+p {  text-indent: 12px; line-height: 2; font-size: 16px; font-family: "Times New Roman", Times, serif;}
 
 /* /////////////////////////////////////////////// */
 /* CONTENIDO */
@@ -25,7 +29,7 @@ a:hover { animation-name: mousehover; animation-duration: 2s; color: red; cursor
 .around {justify-content:space-around;}	
 .evenly {justify-content:space-evenly;}	
 .center {justify-content:center; text-align: center; }	
-
+.alignleft {text-align:left;}.aligncenter {text-align:center;}.alignright {text-align:right;}
 
 
 /* /////////////////////////////////////////////// */
@@ -35,6 +39,8 @@ a:hover { animation-name: mousehover; animation-duration: 2s; color: red; cursor
 	padding: 1vw;	
 	background-color: #e6ffff; border-style: ridge;		
 }
+
+.box img {max-width: 90%;}
 
 .small {width: 30%;} .medium {width: 60%;} .big {width: 90%;}  
 

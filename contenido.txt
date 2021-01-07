@@ -10,3 +10,18 @@
 8.  CAPITULO VI. CONCLUSIONES Y RECOMENDACIONES
 9.  REFERENCIAS
 10. ANEXOS
+
+INDUSTRIA 4.0
+CRM . cualquier empresa que defina un modelo de gestión basado en las relaciones con sus clientes, 
+sus datos y saque un beneficio final tiene un CRM
+CLOUD COMPUTING
+
+
+//PARTE TEORICA
+GRAFICOS Y ANALISIS -> VER CATALOGO 
+EJEMPLO PRACTICO -> "COMO PUEDE BENEFICIAR SU EMPRESA"
+QUE ES 4.0 -> PORQUE 4.0 (GRAFICOS) -> COMO 4.0 (TUTORIAL)
+
+//PARTE PRACTICA
+DEMO
+TUTORIAL
