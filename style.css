@@ -5,7 +5,7 @@ body {	background-color: #cc0000; color: black;}
 .material-icons { color: black; } .custom-icons {max-height:2vw; vertical-align:middle;}
 i {vertical-align:middle;}
 h1,h2,h3,h4,h5,h6,p,pre{margin:0;padding:0}
-a {font-weight:bold; color:blue;} a:visited {color:blue;} a:visited:hover {color:red;}
+a {text-decoration: none; font-weight:bold; color:blue;} a:visited {color:blue;} a:visited:hover {color:red;}
 a:hover { animation-name: mousehover; animation-duration: 2s; color: red; cursor:pointer;}
 /* /////////////////////////////////////////////// */
 /* NORMAS APA */
@@ -22,14 +22,24 @@ p {  text-indent: 12px; line-height: 2; font-size: 16px; font-family: "Times New
 #banner{ display:flex;  flex-flow: wrap;}
 	#banner i {font-size:60px;}
 .separator{width: 100%; max-width: 100%; display:flex;}
+.nolink {color: black; cursor:auto;} 
+.nolink:hover {color: black; cursor:auto; animation-name: none; animation-duration: 0s;}
+
+/* /////////////////////////////////////////////// */
+/* FORMAT */
+/* /////////////////////////////////////////////// */
+/*FLEX*/
 .wrap {flex-wrap:wrap;} .nowrap {flex-wrap:nowrap;}
 .row{flex-direction:row;} .column {flex-direction:column;} 
 .between {justify-content:space-between;}
-.marginleft {margin-left: 10%;}	
 .around {justify-content:space-around;}	
 .evenly {justify-content:space-evenly;}	
-.center {justify-content:center; text-align: center; }	
+.center {justify-content:center; align-items:center; text-align: center; }	
+/*TEXT-ALIGN*/
 .alignleft {text-align:left;}.aligncenter {text-align:center;}.alignright {text-align:right;}
+/*MARGIN*/
+.marginleft {margin-left: 10%;} .marginright {margin-right: 10%;}
+
 
 
 /* /////////////////////////////////////////////// */
@@ -37,10 +47,11 @@ p {  text-indent: 12px; line-height: 2; font-size: 16px; font-family: "Times New
 /* /////////////////////////////////////////////// */
 .box {		
 	padding: 1vw;	
-	background-color: #e6ffff; border-style: ridge;		
+	background-color: #e6ffff; /*border-style: ridge;		*/
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.box img {max-width: 90%;}
+.box img {max-width: 90%; /*height:15vw;*/}
 
 .small {width: 30%;} .medium {width: 60%;} .big {width: 90%;}  
 
