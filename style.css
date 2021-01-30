@@ -20,7 +20,7 @@ p {  text-indent: 12px; line-height: 2; font-size: 16px; font-family: "Times New
 			padding:3vw; 
 			background-color:white;  }
 #banner{ display:flex;  flex-flow: wrap;}
-	#banner i {font-size:60px;}
+	#banner i {font-size:160px;}
 .separator{width: 100%; max-width: 100%; display:flex;}
 .nolink {color: black; cursor:auto;} 
 .nolink:hover {color: black; cursor:auto; animation-name: none; animation-duration: 0s;}

@@ -11,7 +11,7 @@
 <DIV ID="contenido">	
 	<p class="alignright">Redactado jueves 7 de enero de 2021</p><br>
 	<div id="banner">
-		<i class="material-icons">psychology</i>		
+		<img src="images/logo.png">	
 		<div>
 			<h6>PROPUESTA DE CONSULTORIA TECNICA PARA PYMES</h6>
 			<h1>INTEGRACION A LA INDUSTRIA 4.0</h1>
@@ -91,7 +91,7 @@
 			INFORMACION PRELIMINAR DE LA PROPUESTA TECNICA: <br>
 			3. ¿Qu&eacute; caracteristicas posee Notificaciones HUB de AZURE? ¿Ventajas sobre la competencia?</a>
 		</p>
-		<p class="box center small">
+		<!--<p class="box center small">
 			<a href="#cap4"><img src="images/CC/consultoria.jpg"> <br>
 			PROPUESTA TECNICA: <br>
 			4. ¿Com&oacute; implementar una soluci&oacute;n tecnologica 4.0 con Notificaciones HUB de AZURE?</a>
@@ -99,7 +99,7 @@
 		<p class="box center small">
 			<a href="#cap5"><img src="images/CC/masinformacion.png"> <br>
 			5. ¿Dond&eacute; puedo informarme m&aacute;s sobre el tema?</a>
-		</p>
+		</p>-->
 	</div> <br>	
 	</p><br>
 	
@@ -239,14 +239,17 @@
 	<div class="box marginleft medium">
 		<b>Tabla de contenido</b><br>		
 		<ul>
-			<li><a>Prerrequisitos tecnicos</a> </li>			
-			<li><a>Ventajas sobre la competencia</a> </li>			
-			<li><a>PRERREQUISITORS</a> </li>
+			<li><a href="cap3.1">PRERREQUISITOS TECNICOS</a> </li>			
+			<li><a href="cap3.2">CREAR UNA APLICACION EN LA TIENDA DE WINDOWS</a> </li>			
+			<li><a href="cap3.3">CREACION DE UN CENTRO DE NOTIFICACIONES</a> </li>
+			<li><a href="cap3.4">CREACION DE APLICACION WINDOWS DE EJEMPLO</a> </li>
+			<li><a href="cap3.5">ENVIAR NOTIFICACIONES DE PRUEBA</a> </li>
+			<li><a href="cap3.6">INVERSION ECONOMICA PROYECTADA</a> </li>
 		</ul>
 	</div>
 	<br>
 	<p>
-		<b>Prerrequisitos tecnicos</b>
+		<a class="nolink" name="cap3.1"><b>PRERREQUISITOS TECNICOS</b></a>
 	</p>
 	<ul>
 		<li><p>
@@ -271,12 +274,149 @@
 			https://www.microsoft.com/es-sv/store/apps/windows</a>
 		</p></li>
 	</ul>		
-		
+	<p>
+		<a class="nolink" name="cap3.2"><b>CREAR UNA APLICACION EN LA TIENDA WINDOWS</b></a>
+	</p>
+	<p>
+	Ir al Centro de desarrollo de Windows. Inicie sesión en su cuenta Microsoft y seleccione
+	“create a new app” (crear aplicación).<br>
+	<img src="images/cap3/c311.png"> <br>
+	Escribir el nombre de la aplicación y seleccionar “Reserve product name” (Reservar
+nombre de producto). Así se crea un nuevo registro de la Tienda Windows para el
+registro de la aplicación <br>
+	Expandir “Administración de productos”, seleccione “WNS/MPNS” y, a continuación,
+seleccione “Sitio de Servicios Live”. Iniciar sesión en su cuenta de Microsoft. La página
+de registro de la aplicación se abre en una nueva pestaña. Como alternativa, puede ir
+directamente a la página “Mis aplicaciones” y seleccionar el nombre de la aplicación
+para llegar a esta página.<br>
+<img src="images/cap3/c312.png"> <br>
+Observe la contraseña de “Secretos de aplicación”, junto con el valor de “Identificador
+de seguridad de paquete” (SID) e “Identidad de la aplicación” en la sección Tienda
+Windows<br>
+	</p>
+	<p>
+		<a class="nolink" name="cap3.3"><b>CREACION DE UN CENTRO DE NOTIFICACIONES</b></a>
+	</p>
+	Iniciar sesión en el portal de Microsoft Azure.
+Seleccionar “Todos los servicios” en el menú de la izquierda y seleccione “Notification
+Hubs” en la sección “Móvil”. Ahora el icono de estrella junto al nombre del servicio 
+<br>
+para agregarlo a la sección “FAVORITOS” en el menú de la izquierda. Cuando se agrega
+“Notification Hubs” a “FAVORITOS”, selecciónelo en el menú de la izquierda<br>
+En la página “Notification Hubs”, elejir “Agregar” en la barra de herramientas.<br>
+En la página “Notification Hubs”, realice los pasos siguientes:<br>
+1. Escribir un nombre en el centro de notificaciones.<br>
+2. Poner un nombre en “Crear un nuevo espacio de nombres”. Un espacio de nombres
+contiene uno o más centros.<br>
+3. Escoger un valor en el cuadro de lista desplegable “Ubicación”. Este valor
+especifica la ubicación en la que quiere crear el centro.<br>
+4. Seleccione un grupo de recursos existente en “Grupo de recursos”, o cree un
+nombre para el nuevo grupo.<br>
+5. Seleccionar “Crear”.<br>
+6. Ahora elegir “Notificaciones” (el icono de campana) y, luego “Ir al recurso”.
+También hay que actualizar la lista en la página “Notification Hubs” y seleccionar
+su centro.<br>
+7. Seleccionar “Directivas de acceso” en la lista. Observe que las dos cadenas de
+conexión están disponibles. Las necesitará más adelante para gestionar las
+notificaciones push.<br>
+<br>
+<b>Importante:</b> No usar la directiva “DefaultFullSharedAccessSignature” en la
+aplicación. Está pensada para usarse solamente en el back-end.<br>
+8. Configuración de los valores de “WNS” (Windows Push Notification Services) del
+centro. En la categoría “CONFIGURACIÓN DE NOTIFICACIONES”, seleccione
+Windows (WNS) WNS es un servicio que permite a desarrolladores terceros
+mandar notificaciones a través de la nube.<br>
+9. Especificar los valores de SID del paquete y Clave de seguridad que anotó en la
+sección anterior.<br>
+10. Hacer clic en “Guardar” en la barra de herramientas<br>
+<img src="images/cap3/c321.png"> <br>
+El centro de notificaciones ya está configurado para funcionar con WNS. Tiene la cadena
+de conexión para registrar la aplicación y enviar notificaciones.
+<br>
+	<p>
+		<a class="nolink" name="cap3.4"><b>CREACION DE APLICACION WINDOWS DE EJEMPLO</b></a>
+	</p>
+En Visual Studio, en el menú “Archivo”, seleccione “Nuevo” y, después, “Proyecto”.<br>
+En el cuadro de diálogo “Crear un nuevo proyecto”, realice estos pasos:<br>
+1. En el cuadro de búsqueda de la parte superior, escriba “Windows Universal”.<br>
+2. En los resultados de la búsqueda, seleccione “Aplicación en blanco” (Windows
+universal) y, después, seleccione “Siguiente”.<br>
+<img src="images/cap3/c322.png"> <br>
+3. En el cuadro de diálogo “Configurar el nuevo proyecto”, escriba un nombre de
+proyecto y una ubicación para los archivos del proyecto.<br>
+4. Elejir “Crear”.<br>
+5. Aceptar los valores predeterminados de las versiones de plataforma mínima y de
+destino y seleccione “Aceptar”.<br>
+6. En el “Explorador de soluciones”, haga clic con el botón derecho en el proyecto de
+la aplicación para la Tienda Windows, seleccione “Publicar” y, a continuación,
+seleccione “Asociar aplicación con la Tienda”. Aparece el asistente. Asocie la
+aplicación con la Tienda Windows<br>
+7. En el asistente, iniciar sesión con la cuenta de Microsoft.<br>
+8. Seleccione la aplicación que registró en el paso 2, “Siguiente” y “Asociar”. De esta
+manera, se agrega la información de registro necesaria de la Tienda Windows al
+manifiesto de aplicación.<br>
+9. En Visual Studio, haga clic con el botón derecho en la solución y seleccione
+“Administrar paquetes NuGet”. Se abre la ventana “Administrar paquetes NuGet”.
+Los paquetes de nuget son porciones de código que asisten a la aplicación en su
+funcionamiento, generalmente en archivos DLL<br>
+10. En el cuadro de búsqueda, escriba “WindowsAzure.Messaging.Managed”,
+seleccione “Instalar” y acepte las condiciones de uso. Esta acción descarga, instala
+y agrega una referencia a la biblioteca de Azure Notification Hubs para Windows
+mediante el paquete NuGet “Microsoft.Azure.NotificationHubs”.<br>
+<img src="images/cap3/c323.png"> <br>
+11. Abra el archivo de proyecto “App.xaml.cs” y agregue las siguientes instrucciones:
+<br>
+<img src="images/cap3/c324.png"> <br>
+12. En el archivo “App.xaml.cs” del proyecto, busque la clase “App” y agregue la
+siguiente definición de método “InitNotificationsAsync”. Reemplace "your hub
+name" por el nombre del centro de notificaciones que creó en Azure Portal y
+reemplace "Your DefaultListenSharedAccessSignature connection string" por la
+cadena de conexión DefaultListenSharedAccessSignature de la página Directivas 
+de acceso del centro de notificaciones: Este código recupera el URI del canal de la
+aplicación desde WNS y, luego, lo registra en el Centro de notificaciones.<br>
+<img src="images/cap3/c325.png"> <br>
+13. Reemplace el marcador de posición hub name por el nombre del centro de
+notificaciones que aparece en Azure Portal. Reemplace también el marcador de
+posición de cadena de conexión por la cadena de conexión
+“DefaultListenSharedAccessSignature” que obtuvo de la página “Directivas de
+acceso del centro de notificaciones” en una sección anterior.<br>
+14. En la parte superior del controlador de eventos “OnLaunched” en “App.xaml.cs”,
+agregue la siguiente llamada al nuevo método “InitNotificationsAsync”. Esta
+acción garantiza que el URI del canal se registra en su centro de notificaciones cada
+vez que se inicia la aplicación.<br>
+15. Haga clic con el botón derecho en “Package.appxmanifest” y seleccione “Ver
+código” (F7). Busque "Identity .../" y reemplace el valor por el que aparece en
+Identidad de la aplicación en el WNS que creó anteriormente.<br>
+16. Para ejecutar la aplicación, presione la tecla F5 del teclado. Se mostrará un cuadro
+de diálogo que contiene la clave de registro. Para cerrar el cuadro de diálogo, haga
+clic en “Aceptar”. La carpeta ahora ya está lista para recibir notificaciones.<br>
+
+	<p>
+		<a class="nolink" name="cap3.5"><b>ENVIAR NOTIFICACIONES DE PRUEBA</b></a>
+	</p>
+	Puede probar rápidamente la recepción de notificaciones en la aplicación si envía alguna
+desde “Azure Portal”.
+En “Azure Portal”, cambie a la pestaña “Información general” y seleccione “Envío de
+prueba” en la barra de herramientas.<br>
+<img src="images/cap3/c341.png"> <br>
+En la ventana “Envío de prueba”, lleve a cabo las siguientes acciones:<br>
+1. En “Plataformas”, seleccione “Windows”.<br>
+2. En “Tipo de notificación”, seleccione “Notificación del sistema”.<br>
+3. Seleccione “Enviar”. Verá el resultado de la operación de envío en la lista Resultado
+de la parte inferior de la ventana. También verá un mensaje de alerta. Verá el
+mensaje de notificación: Mensaje de prueba en el escritorio.<br>
+<img src="images/cap3/c342.png"> <br>
+<img src="images/cap3/c343.png"> <br>
+<img src="images/cap3/c344.png"> <br>
+	<p>
+		<a class="nolink" name="cap3.6"><b>INVERSION ECONOMICA PROYECTADA</b></a>
+	</p>
+	<img src="images/cap3/c35.png"> <br>
 	<p>	
 	<p>	</p>
 	
 	<!-- /////////////////////////////////////////////////////////////////////////////// -->
-	<hr><br>
+	<!--<hr><br>
 	<a class="nolink" name="cap4">
 	<h5>4. ANALISIS Y TABULACION: </h5>
 	<h3>¿Qu&eacute; tan extendido es el uso de tecnologias 4.0 en El Salvador?</h3><br>
@@ -284,7 +424,7 @@
 	<p>	</p>
 	
 	<!-- /////////////////////////////////////////////////////////////////////////////// -->
-	<hr><br>
+	<!--<hr><br>
 	<a class="nolink" name="cap5">
 	<h3>5. ¿Dond&eacute; puedo informarme m&aacute; sobre el tema?</h3><br>
 	</a>
